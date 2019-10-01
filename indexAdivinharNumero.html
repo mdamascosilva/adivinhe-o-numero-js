@@ -1,0 +1,42 @@
+﻿<html>
+<head>
+<title> Tentativas de acerto </title>
+</head>
+<body>
+<h1> Atividade Javascript - Slide 49 </h1>
+<h2> Advinhar o número “pensado” pelo computador, com 3 tentativas de acerto </h2>
+
+<script>
+
+var numeroPensado = Math.round(Math.random()*100);
+var tentativas = 1;
+var acertou = false;
+
+while (tentativas <= 3){
+
+var chute = prompt("Qual seu chute? ");
+
+if (chute == numeroPensado){
+mostra("Acertou! O número era "+ numeroPensado);
+acertou = true;
+
+break;
+}
+
+tentativas++;
+}
+
+if(acertou == false) {
+mostra("Errou! O número pensado era "+ numeroPensado);
+}
+
+function mostra(frase){
+document.write(frase);
+document.write("<br>");
+}
+
+mostra("FIM");
+</script>
+
+</body>
+</html>
